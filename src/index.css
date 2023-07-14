@@ -1,0 +1,245 @@
+/* <================ preventing  default styles start <=========================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(114, 113, 113);
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+:root {
+  --light-black: rgb(32, 32, 32);
+  --dark-black: rgb(24, 24, 24);
+  --solid-black: rgb(18, 18, 18);
+  --title-color: rgb(154, 154, 154);
+  --heading-color: #f1f4e1;
+  --red-color: red;
+}
+.loader {
+  height: calc(100vh - 80px);
+  background-color: var(--dark-black);
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.not-found {
+  height: calc(100vh - 80px);
+  background-color: var(--dark-black);
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+/* <==================== preventing  default styles start <===================== */
+
+/* <========================nav bar styles start <================================ */
+.navbar {
+  background-color: var(--light-black);
+  height: 80px;
+}
+.app-logo span:nth-child(1) {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--heading-color);
+}
+.app-logo span:nth-child(2) {
+  color: var(--red-color);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+.search-filed {
+  border: none;
+  outline: none;
+  width: 450px;
+  padding: 5px;
+  background-color: var(--solid-black);
+  color: var(--heading-color);
+  border: 1px solid #3d3d3e;
+}
+.search-btn {
+  background-color: hsl(0deg 0% 19%);
+  padding: 5px 15px;
+  border: 1px solid #3d3d3e;
+  cursor: pointer;
+}
+/* <========================nav bar styles end <================================ */
+
+/* <========================feeds styles start <================================ */
+.feeds {
+  height: calc(100vh - 80px);
+  width: 100vw;
+  margin-top: 80px;
+  background-color: var(--dark-black);
+}
+
+/* <========================feeds styles end <================================ */
+
+/* <========================side bar styles start <================================ */
+.side-bar {
+  background-color: var(--light-black);
+  height: calc(100vh - 80px);
+  width: 150px;
+  gap: 40px;
+  overflow-y: auto;
+}
+.category-btn {
+  cursor: pointer;
+  gap: 7px;
+  border-radius: 20px;
+  transition: all 0.2s linear;
+}
+.category-btn:hover {
+  background-color: var(--red-color);
+}
+.active {
+  background-color: var(--red-color);
+  color: whitesmoke;
+}
+.category-btn span {
+  font-size: 13px;
+}
+/* <========================side bar styles end <================================ */
+
+/* <========================feed-content-box styles start <================================ */
+.feed-content-box {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: var(--dark-black);
+  overflow-y: auto;
+}
+.feed-content {
+  gap: 10px;
+}
+/* <========================feed-content-box styles end <================================ */
+
+/* <========================cards styles start <================================ */
+
+.videoCard,
+.chenelCard {
+  width: 260px;
+  min-height: 250px;
+}
+.video-title {
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+.chenel-title {
+  color: var(--title-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+.chenelCard img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+/* <========================cards- styles end <================================ */
+
+/* <========================chenel-details start <================================ */
+.chenel-details {
+  background-color: var(--dark-black);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  margin-top: 80px;
+}
+.banner {
+  background: rgb(2, 0, 36);
+  height: 250px;
+  width: 100%;
+}
+.banner a {
+  pointer-events: none;
+}
+.banner .chenelCard {
+  transform: translateY(100px);
+  box-shadow: none !important;
+}
+/* <========================chenel-details end <================================ */
+
+/* <========================searchFeed start <================================ */
+.searchFeed {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  overflow-y: auto;
+  background-color: var(--dark-black);
+}
+/* <========================searchFeed end <================================ */
+/* <========================video-detail start <================================ */
+.video-detail {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  overflow-y: auto;
+  background-color: var(--dark-black);
+}
+.react-player {
+  width: 100%;
+}
+.related-videos {
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+/* <========================video-detail  end <================================ */
+
+/* <======================== media queries  end <================================ */
+@media screen and (max-width: 767px) {
+  .search-filed {
+    width: 100%;
+    margin-left: 20px;
+  }
+  .app-logo span:nth-child(1) {
+    font-size: 1.7rem;
+  }
+  .app-logo span:nth-child(2) {
+    font-size: 1rem;
+  }
+  .video-detail {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .react-player {
+    height: 600px !important;
+  }
+  .related-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 686px) {
+  .videoCard,
+  .chenelCard {
+    width: 100% !important;
+  }
+  .videoCard img,
+  .chenelCard img {
+    width: 100% !important;
+  }
+}
+/* <======================== media queries  end <================================ */
