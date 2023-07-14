@@ -27,4 +27,6 @@ export const categories = [
   { name: 'Comedy', icon: <BiHappy />, },
   { name: 'Gym', icon: <CgGym />, },
   { name: 'Crypto', icon: <GrBitcoin />, },
+  { name: 'Site built by kelvin muriuki', icon: <kelvinmuriuki />, },
+    
 ];
